@@ -8,6 +8,8 @@
     </title>
 </head>
 <body>
+    <?Php
+    ?>
     <h1>Mon Portfolio</h1>
 <p>Je teste ma nouvelle branche</p>
 <p>Je reteste ma branche</p>
