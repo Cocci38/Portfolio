@@ -1,0 +1,28 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+body{
+    font-family: $font-global;
+}
+
+section.presentation{
+    color: $light;
+    background: $dark;
+    background: linear-gradient(38deg, $dark 0%, $light-dark 100%, $middle 100%);
+    height: 90vh;
+
+    header{
+        
+        nav{
+            @include flex-around;
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: $light;
+                    font-size: $font-size-global;
+                }
+            }
+        }
+    }
+}

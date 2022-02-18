@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "sass": "^1.49.8"
+  },
+  "name": "portfolio",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cocci38/Portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cocci38/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Cocci38/Portfolio#readme"
+}
