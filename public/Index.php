@@ -10,34 +10,39 @@
 <body>
     <?Php
     ?>
-    <section class="presentation">
         <header>
-            <nav>
+            <nav class="navbar">
                 <li><a href="">Présentation</a></li>
-                <li><a href="">Compétences</a></li>
-                <li><a href="">Mes projets</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#competence">Compétences</a></li>
+                <li><a href="#projet">Mes projets</a></li>
+                <li><a href="#contact">Contact</a></li>
             </nav>
         </header>
+        <div class="banniere">
         <div>
             <h1>Sandra Villot</h1>
             <p>Développeuse Web & Mobile</p>
+            <a href="https://github.com/Cocci38"><img class="logo" src="./img/github-logo.png" alt="logo_github" ></a>
+            <a href="https://www.linkedin.com/in/sandra-villot-936136209/"><img class="logo" src="./img/linkedin_logo.png" alt="logo_linkedin"></a>
         </div>
-    </section>
-    <section>
+        <div class="photo">
+            <img src="./img/Sandra Villot.jpg" alt="Photo Sandra Villot" srcset="">
+        </div>
+        </div>
+    <section id="competence">
         <h2>Mes compétences</h2>
     </section>
-    <section>
+    <section id="projet">
         <h2>Mes projets</h2>
             <div class="projet-container">
                 <div class="projet-item">
-                    <div>image</div>
-                    <div>texte</div>
+                    <img class="projet-image" src="./img/projet3.png" alt="">
+                    <div class="projet-texte">texte</div>
                 </div>
             </div>
     </section>
     <footer>
-        <section>
+        <section id="contact">
             <h2>Me conctacter</h2>
             <form action="" method="post">
                 <label for="first-name"></label>
