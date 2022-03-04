@@ -8,11 +8,11 @@
 </head>
 <body>
     <?php
-        require_once '../models/Model.php'
+        require_once 'connexion.php'
     ?>
-    <form action="Model.php" method="post">
+    <form action="connexion.php" method="post" enctype="multipart/form-data">
         <label for="title">Titre</label>
-        <input type="text" id="title" name="titre">
+        <input type="text" id="title" name="title">
 
         <label for="description">Description</label>
         <textarea name="description" id="description" cols="30" rows="10"></textarea>
@@ -20,14 +20,11 @@
         <label for="picture">Image du Projet</label>
         <input type="file" name="picture" id="picture">
 
-        <label for="date">Date</label>
-        <input type="datetime" name="date" id="date">
+        <label for="lien_web">Lien Web</label>
+        <input type="url" name="lien_web" id="lien_web">
 
-        <label for="lien-web">Lien Web</label>
-        <input type="url" name="lien-web" id="lien-web">
-
-        <label for="lien-github">Lien GitHub</label>
-        <input type="url" name="lien-github" id="lien-github">
+        <label for="lien_github">Lien GitHub</label>
+        <input type="url" name="lien_github" id="lien_github">
 
         <input type="submit" value="Envoyer">
     </form>
