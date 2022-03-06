@@ -7,7 +7,7 @@ $password = '';
 try {
     $bdd =  new PDO("mysql:host=localhost;dbname=portfolio" , $username, $password);
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo 'Connexion réussie';
+    echo 'Connexion réussie <br>';
 } catch (PDOException $e) {
    echo "Erreur : " . $e->getMessage();
 }
@@ -47,7 +47,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo "erreur extension";
                 break;
         }
-        echo $im;
         // Je bouge la nouvelle image dans le dossier image et je garde l'ancien nom
        // move_uploaded_file($filetmp, "image/" . $filename); 
     }

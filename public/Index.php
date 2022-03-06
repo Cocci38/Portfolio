@@ -8,31 +8,38 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <?Php
-    ?>
+    
         <header>
             <nav class="navbar">
                 <li><a href="">Présentation</a></li>
                 <li><a href="#competence">Compétences</a></li>
-                <li><a href="#projet">Mes projets</a></li>
+                <li><a href="#projet">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
             </nav>
         </header>
         <div class="banniere">
-        <div>
+        <div class="presentation">
+            
             <h1>Sandra Villot</h1>
             <p>Développeuse Web & Mobile</p>
             <a href="https://github.com/Cocci38"><img class="logo" src="./img/github-logo.png" alt="logo_github" ></a>
             <a href="https://www.linkedin.com/in/sandra-villot-936136209/"><img class="logo" src="./img/linkedin_logo.png" alt="logo_linkedin"></a>
         </div>
-        <div class="photo">
-            <img src="./img/Sandra Villot.jpg" alt="Photo Sandra Villot" srcset="">
+        <div class="photo1">
+            <img src="./img/Sandra Villot.png" alt="Photo Sandra Villot" srcset=""class="photo">
+        </div>
+        <div class="custom-shape-divider-bottom-1646578205">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
         </div>
         </div>
-    <section id="competence">
+
+    <section class="competence" id="competence">
         <h2>Mes compétences</h2>
     </section>
-    <section id="projet">
+
+    <section class="projet" id="projet">
         <h2>Mes projets</h2>
             <div class="projet-container">
                 <div class="projet-item">
@@ -41,6 +48,7 @@
                 </div>
             </div>
     </section>
+    
     <footer>
         <section id="contact">
             <h2>Me conctacter</h2>
