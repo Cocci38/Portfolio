@@ -40,11 +40,17 @@
     </section>
 
     <section class="projet" id="projet">
+        <?php  require_once '../administration/selection.php' ?>
         <h2>Mes projets</h2>
             <div class="projet-container">
                 <div class="projet-item">
                     <img class="projet-image" src="./img/projet3.png" alt="">
-                    <div class="projet-texte">texte</div>
+                    <div class="projet-texte">
+                        <h3>Titre</h3>
+                        <p>Description</p>
+                        <p>Technologies</p>
+                        <p>Liens</p>
+                    </div>
                 </div>
             </div>
     </section>

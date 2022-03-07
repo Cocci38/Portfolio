@@ -45,11 +45,12 @@ date_default_timezone_set('Europe/Paris'); // Pour déterminer le fuseau horaire
 $created_at = date("Y-m-d H:i:s", time());  // Pour formater une date / heure
 
 // Insertion des données dans la base de donnée grace à une requête préparer 
-$sql = $bdd->prepare("INSERT INTO projects (title, description, picture, created_at, lien_web, lien_github)
-                VALUES ( :title, :description, :picture, :created_at, :lien_web, :lien_github)");
+$sql = $bdd->prepare("INSERT INTO projects (title, description, techno, picture, created_at, lien_web, lien_github)
+                VALUES ( :title, :description, :techno, :picture, :created_at, :lien_web, :lien_github)");
 
 $sql->bindParam(':title', $_POST ['title']);
 $sql->bindParam(':description', $_POST ['description']);
+$sql->bindParam(':techno', $_POST ['techno']);
 $sql->bindParam(':picture', $_FILES['picture']['name']);
 $sql->bindParam(':created_at', $created_at);
 $sql->bindParam(':lien_web', $_POST ['lien_web']);

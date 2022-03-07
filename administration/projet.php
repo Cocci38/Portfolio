@@ -17,6 +17,9 @@
         <label for="description">Description</label>
         <textarea name="description" id="description" cols="30" rows="10"></textarea>
 
+        <label for="techno">Techno</label>
+        <input type="text" id="techno" name="techno">
+
         <label for="picture">Image du Projet</label>
         <input type="file" name="picture" id="picture">
 
