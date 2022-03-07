@@ -10,7 +10,7 @@
     <?php
         require_once 'connexion.php'
     ?>
-    <form action="connexion.php" method="post" enctype="multipart/form-data">
+    <form action="insertion.php" method="post" enctype="multipart/form-data">
         <label for="title">Titre</label>
         <input type="text" id="title" name="title">
 
