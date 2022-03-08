@@ -40,19 +40,24 @@
     </section>
 
     <section class="projet" id="projet">
-        <?php  require_once '../administration/selection.php' ?>
-        <h2>Mes projets</h2>
+    <h2>Mes projets</h2>
+        <?php  require_once '../administration/selection.php';
+        for ($i=0; $i < count($resultat) ; $i++) { 
+            ?>
             <div class="projet-container">
                 <div class="projet-item">
-                    <img class="projet-image" src="./img/projet3.png" alt="">
+                <?= '<img class="projet-image" src="../administration/image/'  . $resultat[$i]["picture"] . '" alt="">'?>
                     <div class="projet-texte">
-                        <h3>Titre</h3>
-                        <p>Description</p>
-                        <p>Technologies</p>
-                        <p>Liens</p>
+                        <h3>Titre <?= $resultat[$i]["title"] ?></h3>
+                        <p>Description <?= $resultat[$i]["description"] ?></p>
+                        <p>Technologies <?= $resultat[$i]["techno"] ?></p>
+                        <p>Liens <?= $resultat[$i]["lien_web"] ?><?= $resultat[$i]["lien_github"] ?></p>
                     </div>
                 </div>
             </div>
+        <?php
+        }
+        ?>
     </section>
     
     <footer>
