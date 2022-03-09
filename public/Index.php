@@ -51,7 +51,14 @@
                         <h3>Titre <?= $resultat[$i]["title"] ?></h3>
                         <p>Description <?= $resultat[$i]["description"] ?></p>
                         <p>Technologies <?= $resultat[$i]["techno"] ?></p>
-                        <p>Liens <?= $resultat[$i]["lien_web"] ?><?= $resultat[$i]["lien_github"] ?></p>
+                        
+                        <?php if($resultat[$i]["lien_web"]) : ?>
+                        <a target="_blank" href="<?= $resultat[$i]["lien_web"] ?>"> Accès au site </a>
+                        <?php endif; ?>
+                        
+                        <?php if($resultat[$i]["lien_github"]): ?>
+                        <a target="_blank" href="<?= $resultat[$i]["lien_github"] ?>"> Page GitHub </a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

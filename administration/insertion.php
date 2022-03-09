@@ -30,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 imagejpeg($newimg,"image/". $filename);
             case 'jpeg':
                 $im = imagecreatefromjpeg($filetmp);
-                $newimg = imagescale($im, 250);
+                $newimg = imagescale($im, 500);
                 imagejpeg($newimg,"image/". $filename);
                 break;
             default:
