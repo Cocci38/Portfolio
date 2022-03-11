@@ -12,6 +12,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $filename = $_FILES["picture"]["name"];
         $filetype = $_FILES["picture"]["type"];
         $filetmp = $_FILES["picture"]["tmp_name"];
+        $chemin = "../image/";
 
         // Vérifie l'extension du fichier
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
@@ -22,16 +23,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             case 'png':
                 $im = imagecreatefrompng($filetmp); // Pour créer une nouvelle image depuis un fichier ou une URL (selon le nom de l'extention (ici PNG))
                 $newimg = imagescale($im, 250);        // Pour redimentionner l'image
-                imagepng($newimg,"image/". $filename); // Pour envoyer une image vers un navigateur ou un fichier (selon le nom de l'extention (ici PNG))
+                imagepng($newimg,$chemin. $filename); // Pour envoyer une image vers un navigateur ou un fichier (selon le nom de l'extention (ici PNG))
                 break;
             case 'jpg':
                 $im = imagecreatefromjpeg($filetmp);
                 $newimg = imagescale($im, 250);
-                imagejpeg($newimg,"image/". $filename);
+                imagejpeg($newimg,$chemin. $filename);
             case 'jpeg':
                 $im = imagecreatefromjpeg($filetmp);
                 $newimg = imagescale($im, 500);
-                imagejpeg($newimg,"image/". $filename);
+                imagejpeg($newimg,$chemin. $filename);
                 break;
             default:
                 echo "erreur extension";
@@ -48,6 +49,7 @@ $created_at = date("Y-m-d H:i:s", time());  // Pour formater une date / heure
 $sql = $bdd->prepare("INSERT INTO projects (title, description, techno, picture, created_at, lien_web, lien_github)
                 VALUES ( :title, :description, :techno, :picture, :created_at, :lien_web, :lien_github)");
 
+$sql->bindParam(':id', $_POST ['id']);
 $sql->bindParam(':title', $_POST ['title']);
 $sql->bindParam(':description', $_POST ['description']);
 $sql->bindParam(':techno', $_POST ['techno']);
@@ -57,5 +59,5 @@ $sql->bindParam(':lien_web', $_POST ['lien_web']);
 $sql->bindParam(':lien_github', $_POST ['lien_github']);
 $sql->execute();
 echo 'Entrée ajoutée dans la table';
-
+header('Location: ../index.php');
 ?>

@@ -41,30 +41,32 @@
 
     <section class="projet" id="projet">
     <h2>Mes projets</h2>
-        <?php  require_once '../administration/selection.php';
-        for ($i=0; $i < count($resultat) ; $i++) { 
-            ?>
-            <div class="projet-container">
+        <div class="projet-container">
+        <?php  require_once '../administration/crud/selection.php';
+        for ($i=0; $i < count($resultat) ; $i++) { ?>
+
                 <div class="projet-item">
-                <?= '<img class="projet-image" src="../administration/image/'  . $resultat[$i]["picture"] . '" alt="">'?>
-                    <div class="projet-texte">
-                        <h3>Titre <?= $resultat[$i]["title"] ?></h3>
-                        <p>Description <?= $resultat[$i]["description"] ?></p>
-                        <p>Technologies <?= $resultat[$i]["techno"] ?></p>
-                        
-                        <?php if($resultat[$i]["lien_web"]) : ?>
-                        <a target="_blank" href="<?= $resultat[$i]["lien_web"] ?>"> Accès au site </a>
-                        <?php endif; ?>
-                        
-                        <?php if($resultat[$i]["lien_github"]): ?>
-                        <a target="_blank" href="<?= $resultat[$i]["lien_github"] ?>"> Page GitHub </a>
-                        <?php endif; ?>
+                    <?php  if($resultat[$i]["picture"]) : ?> 
+                    <?= '<img class="projet-image" src="../administration/image/'  . $resultat[$i]["picture"] . '" alt="image_du_projet' . $resultat[$i]["title"] .'">'?>
+                    <?php  else : ?>
+                        <img class="projet-image" src="./img/image_vide.png" alt="image_vide" srcset="">
+                    <?php endif; ?>
+                    <div class="projet-text">
+                    <h3>Titre <?= $resultat[$i]["title"] ?></h3>
+                    <p>Description <?= $resultat[$i]["description"] ?></p>
+                    <p>Technologies <?= $resultat[$i]["techno"] ?></p>
+                    <?php if($resultat[$i]["lien_web"]) : ?>
+                    <a target="_blank" href="<?= $resultat[$i]["lien_web"] ?>"> Accès au site </a>
+                    <?php endif; ?>
+                    <?php if($resultat[$i]["lien_github"]): ?>
+                    <a target="_blank" href="<?= $resultat[$i]["lien_github"] ?>"> Page GitHub </a>
+                    <?php endif; ?>
                     </div>
                 </div>
-            </div>
         <?php
         }
         ?>
+        </div>
     </section>
     
     <footer>
