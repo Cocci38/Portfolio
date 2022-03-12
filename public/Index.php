@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css\style.css">
-    <title>Portfolio</title>
+    <title>Sandra Villot - Portfolio - Développeuse</title>
 </head>
 <body>
     
         <header>
             <nav class="navbar">
-                <li><a href="">Présentation</a></li>
+                <li><a href="#presentation">Présentation</a></li>
                 <li><a href="#competence">Compétences</a></li>
                 <li><a href="#projet">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -19,7 +19,7 @@
         </header>
 
         <div class="banniere">
-            <div class="presentation">
+            <div class="accueil">
                 <h1>Sandra Villot</h1>
                 <p>Développeuse Web & Mobile</p>
                 <a href="https://github.com/Cocci38"><img class="logo" src="./img/github-logo.png" alt="logo_github" ></a>
@@ -28,19 +28,38 @@
             <div class="photo1">
                 <img src="./img/Sandra Villot.png" alt="Photo Sandra Villot" srcset=""class="photo">
             </div>
-            <div class="custom-shape-divider-bottom-1646578205">
+            <!--<div class="custom-shape-divider-bottom-1646578205">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
             </svg>
-            </div>
+            </div>-->
         </div>
 
+        <section class="presentation" id="presentation">
+        <h2>Présentation</h2>
+            <p></p>
+    </section>
+
     <section class="competence" id="competence">
-        <h2>Mes compétences</h2>
+        <h2 class="titre-competence">Mes Compétences</h2>
+        <div class="competence-container">
+            <p class="langage">
+                <h3>Langages</h3>
+                    <div>HTML / CSS</div>
+                    <div>PHP</div>
+                    <div>JAVASCRIPT</div>
+                    <div>SASS</div>
+            </p>
+
+            <p class="framework">
+                <h3>Framework</h3>
+                    <div>Bootstrap</div>
+            </p>
+        </div>
     </section>
 
     <section class="projet" id="projet">
-    <h2>Mes projets</h2>
+    <h2>Mes Projets</h2>
         <div class="projet-container">
         <?php  require_once '../administration/crud/selection.php';
         for ($i=0; $i < count($resultat) ; $i++) { ?>
@@ -70,8 +89,9 @@
     </section>
     
     <footer>
+        
         <section id="contact">
-            <h2>Me conctacter</h2>
+            <h2 class="titre-contact">Me Conctacter</h2>
             <form action="" method="post">
                 <label for="first-name"></label>
                 <input type="text" id="first-name" name="prenom" placeholder="Prénom">

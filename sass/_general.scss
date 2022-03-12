@@ -1,6 +1,7 @@
 @import '_variables.scss';
 @import '_mixins.scss';
 @import '_projet.scss';
+@import '_main.scss';
 
 *{
     margin: 0;
@@ -8,7 +9,7 @@
 }
 body{
     font-family: $font-global;
-    background-color: $light;
+    //background-color: $light;
     width: 100%;
 }
 
@@ -39,7 +40,8 @@ body{
         color: $light;
         background-color: $light-dark;
         height: 80vh;
-        .presentation{
+        width: 100%;
+        .accueil{
             z-index: 6;
         }
         .photo1 {
@@ -102,25 +104,18 @@ body{
                 fill: #EEEFFA;
             }
 }
-
-.competence {
-    z-index: 5;
-    margin: 20px;
-    width: 500px;
-    h2{
-        font-size: 20px;
-        margin: 20px;
-        color: $dark;
-    }
-}
-.projet {
-    z-index: 5;
-    margin: 20px;
-}
-
-
 @media (max-width: 400px){
     a{
         font-size: 5px;
+    }
+}
+footer{
+    background-color: $light-dark;
+    color: $light;
+    height: 50vh;
+    width: 100%;
+    bottom: 0;
+    .titre-contact {
+        color: $light;
     }
 }

@@ -1,0 +1,49 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+.presentation {
+    padding: 40px;
+    color: $dark;
+    background-color: $light;
+    height: 60vh;
+}
+
+.competence {
+    background-color: $dark;
+    color: $light;
+    height: 80vh;
+    padding: 40px;
+    .titre-competence {
+        color: $light;
+    }
+    .competence-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        background-color: rgb(150, 59, 101);
+        .langage {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            //background-color: $light;
+            color: $dark;
+            background-color: yellowgreen;
+        }
+        .framework {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            color: $dark;
+            //background-color: $light;
+            background-color: salmon;
+        }
+    }
+}
+
+h2 {
+    color: $dark;
+    text-align: center;
+}
+
