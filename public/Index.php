@@ -24,6 +24,7 @@
                 <p>Développeuse Web & Mobile</p>
                 <a href="https://github.com/Cocci38"><img class="logo" src="./img/github-logo.png" alt="logo_github" ></a>
                 <a href="https://www.linkedin.com/in/sandra-villot-936136209/"><img class="logo" src="./img/linkedin_logo.png" alt="logo_linkedin"></a>
+                <a href="http://mailto:sandra.villot038@gmail.com"><img class="logo" src="./img/mail1.png" alt="envoie d'un mail"></a>
             </div>
             <div class="photo1">
                 <img src="./img/Sandra Villot.png" alt="Photo Sandra Villot" srcset=""class="photo">
@@ -68,7 +69,7 @@
                     <?php  if($resultat[$i]["picture"]) : ?> 
                     <?= '<img class="projet-image" src="../administration/image/'  . $resultat[$i]["picture"] . '" alt="image_du_projet' . $resultat[$i]["title"] .'" width="500px">'?>
                     <?php  else : ?>
-                        <img class="projet-image" src="./img/image_vide.png" alt="image_vide" srcset="">
+                        <img class="projet-image" src="./img/image_vide.png" alt="image_vide" srcset="" width="400px">
                     <?php endif; ?>
                             
                     <div class="projet-text">
