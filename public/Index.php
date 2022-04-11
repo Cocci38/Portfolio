@@ -43,18 +43,18 @@
     <section class="competence" id="competence">
         <h2 class="titre-competence">Mes Compétences</h2>
         <div class="competence-container">
-            <p class="langage">
+            <div class="langage">
                 <h3>Langages</h3>
-                    <div>HTML / CSS</div>
-                    <div>PHP</div>
-                    <div>JAVASCRIPT</div>
-                    <div>SASS</div>
-            </p>
+                <div>HTML / CSS</div>
+                <div>PHP</div>
+                <div>JAVASCRIPT</div>
+                <div>SASS</div>
+            </div>
 
-            <p class="framework">
+            <div class="framework">
                 <h3>Framework</h3>
-                    <div>Bootstrap</div>
-            </p>
+                <div>Bootstrap</div>
+            </div>
         </div>
     </section>
 
@@ -93,9 +93,6 @@
         <section id="contact">
             <h2 class="titre-contact">Me Conctacter</h2>
             <form action="" method="post">
-                <label for="first-name"></label>
-                <input type="text" id="first-name" name="prenom" placeholder="Prénom">
-
                 <label for="last-name"></label>
                 <input type="text" id="last-name" name="nom" placeholder="Nom">
 
