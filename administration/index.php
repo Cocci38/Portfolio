@@ -30,6 +30,7 @@
                     </div>
                 </div>
                 <p><?= '<a href="projet-modif.php?Id='. $resultat[$i]["id"] . '">' . ' Modifier' . '</a><br>' . '<br>'; ?></p>
+                <a href="./crud/supprimer.php?Id=<?= $resultat[$i]["id"] ?>">Supprimer </a>
         <?php
         }
         ?>
