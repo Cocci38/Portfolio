@@ -14,28 +14,28 @@
         $select1 = $bdd->prepare("SELECT * FROM projects WHERE id = $id");
         //$select1 -> bindValue (":id" , $_GET['Id'] );
         $select1 -> execute();
-        $resultat1 = $select1->fetchAll(PDO::FETCH_ASSOC);
+        $resultat1 = $select1->fetch(PDO::FETCH_ASSOC);
         print_r($resultat1);
         ?>
     
     <form action="./crud/modifier.php" method="post" enctype="multipart/form-data">
         <label for="title">Titre</label>
-        <input type="text" id="title" name="title" value="<?= implode($resultat1["title"]) ?>">
+        <input type="text" id="title" name="title" value="<?=$resultat1["title"]?>">
 
         <label for="description">Description</label>
-        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        <textarea name="description" id="description" cols="30" rows="10" placeholder="<?=$resultat1["description"]?>" ></textarea>
 
         <label for="techno">Techno</label>
-        <input type="text" id="techno" name="techno">
+        <input type="text" id="techno" name="techno" value="<?=$resultat1["techno"]?>">
 
         <label for="picture">Image du Projet</label>
         <input type="file" name="picture" id="picture">
 
         <label for="lien_web">Lien Web</label>
-        <input type="url" name="lien_web" id="lien_web">
+        <input type="url" name="lien_web" id="lien_web" value="<?=$resultat1["lien_web"]?>">
 
         <label for="lien_github">Lien GitHub</label>
-        <input type="url" name="lien_github" id="lien_github">
+        <input type="url" name="lien_github" id="lien_github" value="<?=$resultat1["lien_github"]?>">
 
         <input type="submit" value="Envoyer">
     </form>

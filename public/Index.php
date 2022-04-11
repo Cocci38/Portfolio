@@ -66,20 +66,23 @@
 
                 <div class="projet-item">
                     <?php  if($resultat[$i]["picture"]) : ?> 
-                    <?= '<img class="projet-image" src="../administration/image/'  . $resultat[$i]["picture"] . '" alt="image_du_projet' . $resultat[$i]["title"] .'">'?>
+                    <?= '<img class="projet-image" src="../administration/image/'  . $resultat[$i]["picture"] . '" alt="image_du_projet' . $resultat[$i]["title"] .'" width="500px">'?>
                     <?php  else : ?>
                         <img class="projet-image" src="./img/image_vide.png" alt="image_vide" srcset="">
                     <?php endif; ?>
+                            
                     <div class="projet-text">
-                    <h3>Titre <?= $resultat[$i]["title"] ?></h3>
-                    <p>Description <?= $resultat[$i]["description"] ?></p>
-                    <p>Technologies <?= $resultat[$i]["techno"] ?></p>
-                    <?php if($resultat[$i]["lien_web"]) : ?>
-                    <a target="_blank" href="<?= $resultat[$i]["lien_web"] ?>"> Accès au site </a>
-                    <?php endif; ?>
-                    <?php if($resultat[$i]["lien_github"]): ?>
-                    <a target="_blank" href="<?= $resultat[$i]["lien_github"] ?>"> Page GitHub </a>
-                    <?php endif; ?>
+                        <h3><?= $resultat[$i]["title"] ?></h3>
+                        <h4>Description  </h4>
+                        <p><?= $resultat[$i]["description"] ?></p>
+                        <h4>Technologies  </h4>
+                        <p><?= $resultat[$i]["techno"] ?></p>
+                        <?php if($resultat[$i]["lien_web"]) : ?>
+                        <a target="_blank" href="<?= $resultat[$i]["lien_web"] ?>"> Accès au site </a>
+                        <?php endif; ?>
+                        <?php if($resultat[$i]["lien_github"]): ?>
+                        <a target="_blank" href="<?= $resultat[$i]["lien_github"] ?>"> Page GitHub </a>
+                        <?php endif; ?>
                     </div>
                 </div>
         <?php
