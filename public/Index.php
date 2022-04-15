@@ -36,9 +36,10 @@
             </div>-->
         </div>
 
-        <section class="presentation" id="presentation">
+    <section class="presentation" id="presentation">
         <h2>Présentation</h2>
             <p></p>
+            <a href="../CV_SANDRA_VILLOT.pdf">Télécharger mon CV</a>
     </section>
 
     <section class="competence" id="competence">
