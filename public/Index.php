@@ -8,16 +8,16 @@
     <title>Sandra Villot - Portfolio - Développeuse</title>
 </head>
 <body>
-    
         <header>
             <nav class="navbar">
+                <li><a href="#header"><img src="./img/logo-sandravillot.png" alt="logo_avec_mes_initial" width="50px"></a></li>
                 <li><a href="#presentation">Présentation</a></li>
                 <li><a href="#competence">Compétences</a></li>
                 <li><a href="#projet">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
             </nav>
         </header>
 
+    <section id="header">
         <div class="banniere">
             <div class="accueil">
                 <h1>Sandra Villot</h1>
@@ -35,7 +35,7 @@
             </svg>
             </div>-->
         </div>
-
+    </section>
     <section class="presentation" id="presentation">
         <h2>Présentation</h2>
             <p></p>
@@ -68,7 +68,7 @@
 
                 <div class="projet-item">
                     <?php  if($resultat[$i]["picture"]) : ?> 
-                    <?= '<img class="projet-image" src="../administration/image/'  . $resultat[$i]["picture"] . '" alt="image_du_projet' . $resultat[$i]["title"] .'" width="500px">'?>
+                    <?= '<img class="projet-image" src="../administration/image/'  . $resultat[$i]["picture"] . '" alt="image_du_projet' . $resultat[$i]["title"] .'" width="1000px">'?>
                     <?php  else : ?>
                         <img class="projet-image" src="./img/image_vide.png" alt="image_vide" srcset="" width="400px">
                     <?php endif; ?>

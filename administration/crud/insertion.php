@@ -22,16 +22,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         switch ($ext) {
             case 'png':
                 $im = imagecreatefrompng($filetmp); // Pour créer une nouvelle image depuis un fichier ou une URL (selon le nom de l'extention (ici PNG))
-                $newimg = imagescale($im, 600);        // Pour redimentionner l'image
+                $newimg = imagescale($im, 800);        // Pour redimentionner l'image
                 imagepng($newimg,$chemin. $filename); // Pour envoyer une image vers un navigateur ou un fichier (selon le nom de l'extention (ici PNG))
                 break;
             case 'jpg':
                 $im = imagecreatefromjpeg($filetmp);
-                $newimg = imagescale($im, 600);
+                $newimg = imagescale($im, 800);
                 imagejpeg($newimg,$chemin. $filename);
             case 'jpeg':
                 $im = imagecreatefromjpeg($filetmp);
-                $newimg = imagescale($im, 600);
+                $newimg = imagescale($im, 800);
                 imagejpeg($newimg,$chemin. $filename);
                 break;
             default:
@@ -42,6 +42,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
        // move_uploaded_file($filetmp, "image/" . $filename); 
     }
 }
+
+
 date_default_timezone_set('Europe/Paris'); // Pour déterminer le fuseau horaire
 $created_at = date("Y-m-d H:i:s", time());  // Pour formater une date / heure
 
