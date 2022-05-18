@@ -19,14 +19,14 @@
         if (@$_POST) {
             extract(@$_POST);
         
-        $sql2 = $bdd->prepare("UPDATE projects SET title = :title, description = :description, techno = :techno, picture = :picture, lien_web = :lien_web, lien_github = :lien_github WHERE id = $id");
-        $sql2->bindParam(':title', $title, PDO::PARAM_STR);
-        $sql2->bindParam(':description', $description, PDO::PARAM_STR);
-        $sql2->bindParam(':techno', $techno, PDO::PARAM_STR);
-        $sql2->bindParam(':picture', $picture, PDO::PARAM_STR);
-        $sql2->bindParam(':lien_web', $lien_web, PDO::PARAM_STR);
-        $sql2->bindParam(':lien_github', $lien_github, PDO::PARAM_STR);
-        $sql2->execute();
+            $sql2 = $bdd->prepare("UPDATE projects SET title = :title, description = :description, techno = :techno, picture = :picture, lien_web = :lien_web, lien_github = :lien_github WHERE id = $id");
+            $sql2->bindParam(':title', $title, PDO::PARAM_STR);
+            $sql2->bindParam(':description', $description, PDO::PARAM_STR);
+            $sql2->bindParam(':techno', $techno, PDO::PARAM_STR);
+            $sql2->bindParam(':picture', $picture, PDO::PARAM_STR);
+            $sql2->bindParam(':lien_web', $lien_web, PDO::PARAM_STR);
+            $sql2->bindParam(':lien_github', $lien_github, PDO::PARAM_STR);
+            $sql2->execute();
         }
         ?>
     
@@ -55,9 +55,9 @@
 
     <?php
 
-if ($_POST) {
-    header('location: index.php');
-}
+    if ($_POST) {
+        header('location: index.php');
+    }
 ?>
 </body>
 </html>
